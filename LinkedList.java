@@ -1,10 +1,11 @@
 // Class: CS 145
 // Assignment: Phonebook
 // Authors: Troy Brunette, Clay Molitor
-
+//
 // This is the LinkedList data structure for the phonebook program
 // It uses various methods for adding and removing items from the list
 // There is a ListNode subclass located at the bottom of this file
+
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 
