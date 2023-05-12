@@ -1,11 +1,11 @@
 // Class: CS 145
 // Assignment: Phonebook
 // Authors: Troy Brunette, Clay Molitor
-
-
+//
 // Entry class represents a contact in a phonebook
 //      - the data part of the linked list
 //      - has private fields, constructor methods, getter/setter methods
+
 public class Entry {
     // CLASS FIELDS
     private String firstName;
