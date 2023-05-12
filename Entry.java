@@ -10,7 +10,6 @@ public class Entry {
     // CLASS FIELDS
     private String firstName;
     private String lastName;
-    private String fullName;
     private String phone;
     private String address;
     private String zipCode;
@@ -20,19 +19,14 @@ public class Entry {
     // CONSTRUCTORS
     public Entry() {}
 
-    public Entry(String name, String phone) {
-        this.fullName = name;
-        this.phone = phone;
-    }
     public Entry(String firstName, String lastName, String phone) {
-        this.fullName = firstName + " " + lastName;
         this.firstName = firstName;
         this.lastName = lastName;
         this.phone = phone;
     }
 
     public String toString() {
-        return String.format("|%-18s%2$2s|", fullName, phone);
+        return String.format("|%-18s%2$2s|", getName(), phone);
     }
 
 
@@ -44,7 +38,7 @@ public class Entry {
         return this;
     }
     public Entry setFullName(String firstName, String lastName) {
-        this.fullName = firstName + " " + lastName;
+        
         this.firstName = firstName;
         this.lastName = lastName;
         return this;
@@ -68,10 +62,11 @@ public class Entry {
 
     // GETTER METHODS ////////////////////////////////////
     public Entry getEntry() { return this; }
-    public String getName() { return fullName; }
+    public String getName() { return firstName + " " + lastName; }
     public String getPhoneNumber() { return phone; }
     public String getAddress() { return address; }
     public String getCity() { return city; }
+    public String getState() { return state; }
     public String getZipCode() { return zipCode; }
 
 }

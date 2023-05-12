@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class RollADexManager {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         // Create an empty LinkedList for the phonebook
         LinkedList list = new LinkedList();
 
@@ -24,7 +24,7 @@ public class RollADexManager {
         menuSelection(list);
     } // end of main method
 
-    public static void menuSelection(LinkedList list) throws IOException {
+    public static void menuSelection(LinkedList list) {
         Scanner input = new Scanner(System.in);
         String choice;
         System.out.print("Enter a choice:  ");
@@ -87,7 +87,7 @@ public class RollADexManager {
     }
 
     // Reads a csv file and adds the contacts to the phonebook
-    public static void addEntryFromFile(LinkedList list) throws IOException {
+    public static void addEntryFromFile(LinkedList list) {
         try {
             String path = "RollADex/src/entry.csv";
             readFile(path, list);
@@ -157,7 +157,7 @@ public class RollADexManager {
                     .setPhone(phone)
                     .setCity(city));
         }
-
+        scanner.close();
     }
 
     // method for storing the menu and return it
